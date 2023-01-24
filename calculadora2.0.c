@@ -1,36 +1,36 @@
-#include <stdio.h> //biblioteca
-#include <stdlib.h> //biblioteca
+#include <stdio.h> 
+#include <stdlib.h>
 
-/*Faça uma calculadora em "c" que leia dois números e o usuario tenha 7 funções
-(adição , subtração, multiplicação , divisão, fatorial , exponencial e radiação)
-possiveis para fazer operações com os dois numeros digitados...
+/*Faça uma calculadora em "c" que leia dois números e o usuario tenha 4 funções
+(adição , subtração, multiplicação , divisão) possiveis para fazer operações 
+com os dois numeros digitados...
 */
 
-void soma(){ //funcao de soma
-    float valor1, valor2, result; //declaração de variaveis 5.3
-    printf("\nDigite o 1 valor: "); //pede um valor
-    scanf ("%f", &valor1); //armazena o valor
-    printf("Digite o 2 valor: "); //pede outro valor
-    scanf ("%f", &valor2); //armazena o valor em um float
-    result = valor1 + valor2; //soma valor1 com valor 2 e coloca em result
-    printf("\nResultado: %.2f\n\n ", result); //mostra o resultado 2.36
-    system ("pause"); //pausa pra dar tempo de ver
-    system("cls"); //limpa a tela apos precinado enter
-    menu(); //chama o menu novamente
-}
-void subtrai(){ //funcao subtração
-    float valor1, valor2, result; //variaveis
-    printf("\nDigite o 1 valor: "); //pedi variavel
-    scanf ("%f", &valor1); //armazena variavel
-    printf("Digite o 2 valor: "); //pedi variavel
-    scanf ("%f", &valor2); //armazena variavel
-    result = valor1 - valor2; //subtrai os valor 1 de 2 e armazena em result
-    printf("\nResultado: %.2f\n\n ", result); //mostra o resultado
+void soma(){ 
+    float valor1, valor2, result; 
+    printf("\nDigite o 1 valor: "); 
+    scanf ("%f", &valor1); 
+    printf("Digite o 2 valor: "); 
+    scanf ("%f", &valor2);
+    result = valor1 + valor2; 
+    printf("\nResultado: %.2f\n\n ", result); 
     system ("pause"); //pausa
     system("cls"); //limpa
     menu(); //chama menu
 }
-void divide(){ //funcao divide
+void subtrai(){ 
+    float valor1, valor2, result;
+    printf("\nDigite o 1 valor: "); 
+    scanf ("%f", &valor1); 
+    printf("Digite o 2 valor: "); 
+    scanf ("%f", &valor2); 
+    result = valor1 - valor2; 
+    printf("\nResultado: %.2f\n\n ", result); 
+    system ("pause"); 
+    system("cls");
+    menu(); 
+}
+void divide(){ 
     float valor1, valor2, result;
     printf("\nDigite o 1 valor: ");
     scanf ("%f", &valor1);
@@ -42,7 +42,7 @@ void divide(){ //funcao divide
     system("cls");
     menu();
 }
-void multiplica(){ //funcao multiplica
+void multiplica(){ 
     float valor1, valor2, result;
     printf("\nDigite o 1 valor: ");
     scanf ("%f", &valor1);
@@ -54,8 +54,8 @@ void multiplica(){ //funcao multiplica
     system("cls");
     menu();
 }
-void menu(){ //menu
-    int escolha; //variavel inteira
+void menu(){ // Menu
+    int escolha; 
 
     printf("                ___________________________ \n");
     printf("                |-------------------------| \n");
@@ -70,13 +70,13 @@ void menu(){ //menu
     printf("                |_________________________| \n");
    
     printf("\n");
-    printf("Opcao: "); //msg na tela
+    printf("Opcao: "); 
     scanf ("%d", &escolha); //armazena o int digitado em escolha
 
-    switch (escolha){ //funcao de selecao de escolha do ,menu
-        case 1: //caso digitado 1 execute isto:
-            soma(); //funcao soma feita anteriomente acima
-        break; //termina a funcao de soma
+    switch (escolha){ //funcao de selecao de escolha do menu
+        case 1: 
+            soma(); 
+        break; 
 
         case 2:
             subtrai();
@@ -92,15 +92,15 @@ void menu(){ //menu
 
         case 5: //caso selecionado 5 executa:
             system("exit"); // fechar o programa
-            printf("\nFinalizando...\n\n"); //da uma msg na tela
-        break; // termina a funcao 5 seleciojada
+            printf("\nFinalizando...\n\n"); 
+        break; 
 
         default: // caso nao se digite nenhum do case disponoveis execute
-            printf("\nComando invalido, tente novamente!\n\n"); //msg
+            printf("\nComando invalido, tente novamente!\n\n"); 
             system ("pause"); //pausa
             system ("cls"); //limpa
             menu(); //volta pro menu inicial
-            break; //termina funcao
+            break; 
     }
 }
 
